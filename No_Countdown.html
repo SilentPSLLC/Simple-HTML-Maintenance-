@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Site Maintenance</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html body {
+            text-align: center;
+            padding: 20px;
+            font: 20px Helvetica, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+        }
+        @media (min-width: 768px) {
+            html body {
+                padding-top: 150px;
+            }
+        }
+        h1 {
+            font-size: 50px;
+        }
+        article {
+            display: block;
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        body a {
+            color: #dc8100;
+            text-decoration: none;
+        }
+        body a:hover {
+            color: #333;
+            text-decoration: none;
+        }
+        @media (prefers-color-scheme: dark) {
+            html body {
+                color: #efe8e8;
+                background-color: #2e2929;
+            }
+            body a {
+                color: #dc8100;
+            }
+            body a:hover {
+                color: #efe8e8;
+            }
+        }
+    </style>
+</head>
+<body>
+<article>
+    <h1>We'll Be Back Soon</h1>
+    <div>
+        <p>We're just sprucing things up a bit! We'll be up and running soon,and the page will automatically refresh every 5 minutes.</p>
+        <p>&mdash; The Team</p>
+    </div>
+    <div class="pyro">
+
+    </div>
+</article>
+ <script>
+        /**
+         * Function to reload the page after a specified timeout.
+         * @param {number} interval - The interval in milliseconds before the page reloads.
+         */
+        function reloadPageAfterInterval(interval) {
+            setTimeout(function() {
+                location.reload();
+            }, interval);
+        }
+
+        // Reload the page every 5 minutes (300,000 milliseconds)
+        document.addEventListener('DOMContentLoaded', function() {
+            reloadPageAfterInterval(300000); // 5 minutes in milliseconds
+        });
+    </script>
+</body>
+</html>
