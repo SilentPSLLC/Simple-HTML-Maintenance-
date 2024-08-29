@@ -1,7 +1,7 @@
 <?php
-$time_to_wait = 60; // in seconds
-$site_title = 'My Site';
-$contact_link = '#';
+const TIME_TO_WAITt = 60; // in seconds
+const SITE_TITLE = 'My Site';
+const CONTACT_LINK = 'http://example.com';
 
 // Get the user's preferred languages from the Accept-Language header
 $languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
@@ -160,7 +160,7 @@ header('Retry-After: ' . $time_to_wait);
 </head>
 <body>
 <article>
-    <h1><?php echo $translations[$lang]['heading']; ?></h1>
+    <h1><?php echo htmlspecialchars($translations[$lang]['heading'], ENT_QUOTES, 'UTF-8'); ?></h1>
     <div>
         <p><?php echo $translations[$lang]['text']; ?></p>
         <p><?php echo $translations[$lang]['team']; ?></p>
